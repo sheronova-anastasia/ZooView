@@ -156,5 +156,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankBussinessLogic\ZooBussinessLogic.csproj">
+      <Project>{774e1cf7-5b4a-4e22-b38c-0d0971aaae25}</Project>
+      <Name>ZooBussinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
