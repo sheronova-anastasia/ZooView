@@ -37,10 +37,10 @@
             // 
             // reportViewer
             // 
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "BankView.Report.rdlc";
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "ZooView.Report.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(12, 76);
             this.reportViewer.Name = "reportViewer";
-            this.reportViewer.ServerReport.BearerToken = null;
+            //this.reportViewer.ServerReport.BearerToken = null;
             this.reportViewer.Size = new System.Drawing.Size(908, 457);
             this.reportViewer.TabIndex = 0;
             // 

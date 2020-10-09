@@ -39,8 +39,6 @@ namespace ZooView
                     {
                         textBoxFIO.Text = view.ClientFIO;
                         textBoxGender.Text = view.Gender;
-                        textBoxJob.Text = view.Job;
-                        textBoxPassportData.Text = view.PassportData.ToString();
                         textBoxNumber.Text = view.Number.ToString();
                         textBoxCount.Text = view.CountTicket.ToString();
                         textBoxEmail.Text = view.Email;
@@ -78,18 +76,6 @@ namespace ZooView
             if (string.IsNullOrEmpty(textBoxGender.Text))
             {
                 MessageBox.Show("Заполните пол", "Ошибка", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(textBoxJob.Text))
-            {
-                MessageBox.Show("Заполните работу", "Ошибка", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
-                return;
-            }
-            if (string.IsNullOrEmpty(textBoxPassportData.Text))
-            {
-                MessageBox.Show("Заполните паспортные данные", "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
                 return;
             }
@@ -140,8 +126,6 @@ namespace ZooView
                     Id = id,
                     ClientFIO = textBoxFIO.Text,
                     Gender = textBoxGender.Text,
-                    Job = textBoxJob.Text,
-                    PassportData = Convert.ToInt32(textBoxPassportData.Text),
                     Number = Convert.ToInt32(textBoxNumber.Text),
                     Email = textBoxEmail.Text,
                     CountTicket = Convert.ToInt32(textBoxCount.Text),

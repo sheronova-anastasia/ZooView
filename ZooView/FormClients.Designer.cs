@@ -40,19 +40,21 @@
             // 
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView.Location = new System.Drawing.Point(9, 10);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(1263, 383);
+            this.dataGridView.Size = new System.Drawing.Size(947, 311);
             this.dataGridView.TabIndex = 2;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(1304, 12);
+            this.buttonAdd.Location = new System.Drawing.Point(978, 10);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(210, 38);
+            this.buttonAdd.Size = new System.Drawing.Size(158, 31);
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -60,9 +62,10 @@
             // 
             // buttonUpd
             // 
-            this.buttonUpd.Location = new System.Drawing.Point(1304, 76);
+            this.buttonUpd.Location = new System.Drawing.Point(978, 62);
+            this.buttonUpd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonUpd.Name = "buttonUpd";
-            this.buttonUpd.Size = new System.Drawing.Size(210, 38);
+            this.buttonUpd.Size = new System.Drawing.Size(158, 31);
             this.buttonUpd.TabIndex = 4;
             this.buttonUpd.Text = "Изменить";
             this.buttonUpd.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             // 
             // buttonDel
             // 
-            this.buttonDel.Location = new System.Drawing.Point(1304, 147);
+            this.buttonDel.Location = new System.Drawing.Point(978, 119);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(210, 38);
+            this.buttonDel.Size = new System.Drawing.Size(158, 31);
             this.buttonDel.TabIndex = 5;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
             // 
             // buttonRef
             // 
-            this.buttonRef.Location = new System.Drawing.Point(1304, 219);
+            this.buttonRef.Location = new System.Drawing.Point(978, 178);
+            this.buttonRef.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRef.Name = "buttonRef";
-            this.buttonRef.Size = new System.Drawing.Size(210, 38);
+            this.buttonRef.Size = new System.Drawing.Size(158, 31);
             this.buttonRef.TabIndex = 6;
             this.buttonRef.Text = "Обновить";
             this.buttonRef.UseVisualStyleBackColor = true;
@@ -90,14 +95,15 @@
             // 
             // FormClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1526, 408);
+            this.ClientSize = new System.Drawing.Size(1143, 332);
             this.Controls.Add(this.buttonRef);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonUpd);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridView);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormClients";
             this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.FormMain_Load);
