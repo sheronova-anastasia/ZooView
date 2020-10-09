@@ -27,7 +27,7 @@ namespace ZooBussinessLogic.BusinessLogics
             var list = new List<TicketViewModel>();
             foreach (var tick in tickets)
             {
-                if (tick.Status == Status.Готово)
+                if (tick.Status == Status.Продан)
                 {
                     var record = new TicketViewModel
                     {
@@ -48,7 +48,7 @@ namespace ZooBussinessLogic.BusinessLogics
             {
                 if (tick.WorkerId == id)
                 {
-                    if (tick.Status == Status.Готово)
+                    if (tick.Status == Status.Продан)
                     {
                         var record = new TicketViewModel
                         {

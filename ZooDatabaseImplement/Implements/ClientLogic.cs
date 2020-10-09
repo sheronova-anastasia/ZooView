@@ -16,7 +16,7 @@ namespace ZooDatabaseImplement.Implements
         {
             using (var context = new ZooDatabase())
             {
-                Client element = context.Clients.FirstOrDefault(rec => rec.ClientFIO == model.ClientFIO && rec.Id == model.Id && rec.Job == model.Job && rec.Number == model.Number && rec.PassportData == model.PassportData && rec.Gender == model.Gender && rec.Score == model.Score && rec.DateCreate == model.DateCreate && rec.CountService == model.CountService && rec.Email == model.Email);
+                Client element = context.Clients.FirstOrDefault(rec => rec.ClientFIO == model.ClientFIO && rec.Id == model.Id && rec.Job == model.Job && rec.Number == model.Number && rec.PassportData == model.PassportData && rec.Gender == model.Gender && rec.Score == model.Score && rec.DateCreate == model.DateCreate && rec.CountTicket == model.CountTicket && rec.Email == model.Email);
                 if (element != null)
                 {
                     throw new Exception("Уже есть такой клиент");
@@ -40,23 +40,23 @@ namespace ZooDatabaseImplement.Implements
                 element.Job = model.Job;
                 element.Number = model.Number;
                 element.Email = model.Email;
-                element.CountService = model.CountService;
+                element.CountTicket = model.CountTicket;
                 element.Score = model.Score;
                 element.DateCreate = DateTime.Now;
                 context.SaveChanges();
-                var groupServices = model.ServiceClients
-                               .GroupBy(rec => rec.ServiceId)
+                var groupTickets = model.TicketClients
+                               .GroupBy(rec => rec.TicketId)
                                .Select(rec => new
                                {
-                                   ServiceId = rec.Key,
+                                   TicketId = rec.Key,
                                });
 
-                foreach (var groupService in groupServices)
+                foreach (var groupTicket in groupTickets)
                 {
-                    context.ServiceClients.Add(new ServiceClient
+                    context.TicketClients.Add(new TicketClient
                     {
                         ClientId = element.Id,
-                        ServiceId = groupService.ServiceId,
+                        TicketId = groupTicket.TicketId,
                     });
                     context.SaveChanges();
                 }
@@ -94,35 +94,35 @@ namespace ZooDatabaseImplement.Implements
                     Job = rec.Job,
                     Number = rec.Number,
                     Email = rec.Email,
-                    CountService = rec.CountService,
+                    CountTicket = rec.CountTicket,
                     Score = rec.Score,
                     DateCreate = rec.DateCreate,
-                    ServiceClients = GetServiceClientViewModel(rec)
+                    TicketClients = GetTicketClientViewModel(rec)
                 })
                 .ToList();
             }
         }
-        public static List<TicketClientViewModel> GetServiceClientViewModel(Client client)
+        public static List<TicketClientViewModel> GetTicketClientViewModel(Client client)
         {
             using (var context = new ZooDatabase())
             {
-                var ServiceClients = context.ServiceClients
+                var TicketClients = context.TicketClients
                     .Where(rec => rec.ClientId == client.Id)
-                    .Include(rec => rec.Service)
+                    .Include(rec => rec.Ticket)
                     .Select(rec => new TicketClientViewModel
                     {
                         Id = rec.Id,
                         ClientId = rec.ClientId,
-                        ServiceId = rec.ServiceId,
+                        TicketId = rec.TicketId,
                         Cost = rec.Cost
                     }).ToList();
-                foreach (var serv in ServiceClients)
+                foreach (var tick in TicketClients)
                 {
-                    var servData = context.Services.Where(rec => rec.Id == serv.ServiceId).FirstOrDefault();
-                    serv.TypeService = servData.TypeService;
-                    serv.Cost = servData.Cost;
+                    var tickData = context.Tickets.Where(rec => rec.Id == tick.TicketId).FirstOrDefault();
+                    tick.TypeTicket = tickData.TypeTicket;
+                    tick.Cost = tickData.Cost;
                 }
-                return ServiceClients;
+                return TicketClients;
             }
         }
     }

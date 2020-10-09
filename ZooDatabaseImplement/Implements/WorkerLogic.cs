@@ -13,7 +13,7 @@ namespace ZooDatabaseImplement.Implements
 {
     public class WorkerLogic : IWorkerLogic
     {
-        private readonly string WorkerFileName = "C://Users//marin.LAPTOP-0TUFHPTU//source//repos//Kursach_Bank//BankView//data//Worker.xml";
+        private readonly string WorkerFileName = "C://Users//Настя//source//repos//ZooView//data//Worker.xml";
         public List<Worker> Workers { get; set; }
         public WorkerLogic()
         {

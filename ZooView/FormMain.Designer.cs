@@ -32,9 +32,9 @@
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.клиентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчетПоВыполненнымУслугамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетПоПроданнымБилетамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчетПоКлиентамИИхСчетуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.расчтеССотрудникамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.расчетССотрудникамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьБекапToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.графикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +47,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.справочникиToolStripMenuItem,
             this.отчетыToolStripMenuItem,
-            this.расчтеССотрудникамиToolStripMenuItem,
+            this.расчетССотрудникамиToolStripMenuItem,
             this.создатьБекапToolStripMenuItem,
             this.графикиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -74,18 +74,18 @@
             // отчетыToolStripMenuItem
             // 
             this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отчетПоВыполненнымУслугамToolStripMenuItem,
+            this.отчетПоПроданнымБилетамToolStripMenuItem,
             this.отчетПоКлиентамИИхСчетуToolStripMenuItem});
             this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
             this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.отчетыToolStripMenuItem.Text = "Отчеты";
             // 
-            // отчетПоВыполненнымУслугамToolStripMenuItem
+            // отчетПоПроданнымБилетамToolStripMenuItem
             // 
-            this.отчетПоВыполненнымУслугамToolStripMenuItem.Name = "отчетПоВыполненнымУслугамToolStripMenuItem";
-            this.отчетПоВыполненнымУслугамToolStripMenuItem.Size = new System.Drawing.Size(317, 26);
-            this.отчетПоВыполненнымУслугамToolStripMenuItem.Text = "Отчет по выполненным услугам";
-            this.отчетПоВыполненнымУслугамToolStripMenuItem.Click += new System.EventHandler(this.отчетПоВыполненнымУслугамToolStripMenuItem_Click);
+            this.отчетПоПроданнымБилетамToolStripMenuItem.Name = "отчетПоПроданнымБилетамToolStripMenuItem";
+            this.отчетПоПроданнымБилетамToolStripMenuItem.Size = new System.Drawing.Size(317, 26);
+            this.отчетПоПроданнымБилетамToolStripMenuItem.Text = "Отчет по проданным билетам";
+            this.отчетПоПроданнымБилетамToolStripMenuItem.Click += new System.EventHandler(this.отчетПоПроданнымБилетамToolStripMenuItem_Click);
             // 
             // отчетПоКлиентамИИхСчетуToolStripMenuItem
             // 
@@ -94,12 +94,12 @@
             this.отчетПоКлиентамИИхСчетуToolStripMenuItem.Text = "Отчет по клиентам и их счету";
             this.отчетПоКлиентамИИхСчетуToolStripMenuItem.Click += new System.EventHandler(this.отчетПоКлиентамИИхСчетуToolStripMenuItem_Click);
             // 
-            // расчтеССотрудникамиToolStripMenuItem
+            // расчетССотрудникамиToolStripMenuItem
             // 
-            this.расчтеССотрудникамиToolStripMenuItem.Name = "расчтеССотрудникамиToolStripMenuItem";
-            this.расчтеССотрудникамиToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
-            this.расчтеССотрудникамиToolStripMenuItem.Text = "Расчет с сотрудниками";
-            this.расчтеССотрудникамиToolStripMenuItem.Click += new System.EventHandler(this.расчтеССотрудникамиToolStripMenuItem_Click);
+            this.расчетССотрудникамиToolStripMenuItem.Name = "расчетССотрудникамиToolStripMenuItem";
+            this.расчетССотрудникамиToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.расчетССотрудникамиToolStripMenuItem.Text = "Расчет с сотрудниками";
+            this.расчетССотрудникамиToolStripMenuItem.Click += new System.EventHandler(this.расчетССотрудникамиToolStripMenuItem_Click);
             // 
             // создатьБекапToolStripMenuItem
             // 
@@ -132,14 +132,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::BankView.Properties.Resources.bank_ekv;
+            this.BackgroundImage = global::ZooView.Properties.Resources.zoo_ekv;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(915, 440);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
-            this.Text = "Банк";
+            this.Text = "Зоопарк";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -153,8 +153,8 @@
         private System.Windows.Forms.ToolStripMenuItem справочникиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem клиентыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem расчтеССотрудникамиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отчетПоВыполненнымУслугамToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem расчетССотрудникамиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчетПоПроданнымБилетамToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетПоКлиентамИИхСчетуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem создатьБекапToolStripMenuItem;
         private System.Windows.Forms.Label label1;

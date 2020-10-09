@@ -15,6 +15,6 @@ namespace ZooDatabaseImplement.Model
         public string Email { get; set; }
         public int Salary { get; set; }
         [ForeignKey("WorkerId")]
-        public virtual List<Service> Services { get; set; }
+        public virtual List<Ticket> Tickets { get; set; }
     }
 }

@@ -14,20 +14,20 @@ using Unity;
 
 namespace ZooView
 {
-    public partial class FormService : Form
+    public partial class FormTicket : Form
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
         private readonly IClientLogic clientLogic;
         public int Id { set { id = value; } }
         private int? id;
-        private List<TicketClientViewModel> ServiceClients;
-        public FormService(IClientLogic clientLogic)
+        private List<TicketClientViewModel> TicketClients;
+        public FormTicket(IClientLogic clientLogic)
         {
             InitializeComponent();
             this.clientLogic = clientLogic;
         }
-        private void FormService_Load(object sender, EventArgs e)
+        private void FormTicket_Load(object sender, EventArgs e)
         {
             if (id.HasValue)
             {
@@ -39,7 +39,7 @@ namespace ZooView
                     })?[0];
                     if (view != null)
                     {
-                        ServiceClients = view.ServiceClients;
+                        TicketClients = view.TicketClients;
                         LoadData();
                     }
                 }
@@ -54,12 +54,12 @@ namespace ZooView
         {
             try
             {
-                if (ServiceClients != null)
+                if (TicketClients != null)
                 {
                     dataGridView.Rows.Clear();
-                    foreach (var bf in ServiceClients)
+                    foreach (var bf in TicketClients)
                     {
-                        dataGridView.Rows.Add(new object[] { bf.TypeService, bf.Cost });
+                        dataGridView.Rows.Add(new object[] { bf.TypeTicket, bf.Cost });
                     }
                 }
             }

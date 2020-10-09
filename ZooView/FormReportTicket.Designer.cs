@@ -1,6 +1,6 @@
 ﻿namespace ZooView
 {
-    partial class FormReportService
+    partial class FormReportTicket
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,7 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Тип услуги";
+            this.Column2.HeaderText = "Тип билета";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
@@ -91,9 +91,9 @@
             this.ClientSize = new System.Drawing.Size(735, 473);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.dataGridView);
-            this.Name = "FormReportService";
-            this.Text = "Отчет по выполненым услугам";
-            this.Load += new System.EventHandler(this.FormReportService_Load);
+            this.Name = "FormReportTicket";
+            this.Text = "Отчет по проданным билетам";
+            this.Load += new System.EventHandler(this.FormReportTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 

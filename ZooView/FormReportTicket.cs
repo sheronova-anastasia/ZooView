@@ -14,27 +14,27 @@ using Unity;
 
 namespace ZooView
 {
-    public partial class FormReportService : Form
+    public partial class FormReportTicket : Form
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
         private readonly ReportLogic logic;
-        public FormReportService(ReportLogic logic)
+        public FormReportTicket(ReportLogic logic)
         {
             InitializeComponent();
         }
-        private void FormReportService_Load(object sender, EventArgs e)
+        private void FormReportTicket_Load(object sender, EventArgs e)
         {
             try
             {
-                var service = logic.GetServices();
-                if (service != null)
+                var ticket = logic.GetTickets();
+                if (ticket != null)
                 {
                     dataGridView.Rows.Clear();
                     int sum = 0;
-                    foreach (var serv in service)
+                    foreach (var tick in ticket)
                     {
-                        dataGridView.Rows.Add(new object[] { serv.WorkerFIO, serv.TypeService, serv.Status, });
+                        dataGridView.Rows.Add(new object[] { tick.WorkerFIO, tick.TypeTicket, tick.Status, });
                         sum++;
                     }
                     dataGridView.Rows.Add(new object[] { "", "Итого", sum });

@@ -27,15 +27,15 @@ namespace ZooView
             var form = Container.Resolve<FormClients>();
             form.ShowDialog();
         }
-        private void расчтеССотрудникамиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void расчетССотрудникамиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormWorker>();
             form.ShowDialog();
         }
 
-        private void отчетПоВыполненнымУслугамToolStripMenuItem_Click(object sender, EventArgs e)
+        private void отчетПоПроданнымБилетамToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<FormReportService>();
+            var form = Container.Resolve<FormReportTicket>();
             form.ShowDialog();
         }
 

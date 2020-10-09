@@ -58,8 +58,8 @@
             this.chart.TabIndex = 0;
             this.chart.Text = "График";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title1.Name = "Статистика выполненых услуг ";
-            title1.Text = "Статистика выполненых услуг ";
+            title1.Name = "Статистика проданных билетов ";
+            title1.Text = "Статистика проданных билетов ";
             this.chart.Titles.Add(title1);
             // 
             // button1
@@ -68,7 +68,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 41);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Вклад";
+            this.button1.Text = "Крупные животные и птицы";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -78,7 +78,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 41);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Кредит";
+            this.button2.Text = "Аквариум";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -88,7 +88,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 41);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Рассрочка";
+            this.button3.Text = "Рептилии";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -100,7 +100,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Вид услуги:";
+            this.label1.Text = "Тип билета:";
             // 
             // Grafic
             // 

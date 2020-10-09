@@ -94,7 +94,7 @@ spreadsheetDocument.WorkbookPart.Workbook.AppendChild<Sheets>(new Sheets());
                     StyleIndex = 0U
                 });
                 uint rowIndex = 1;
-                foreach (var sr in info.Services)
+                foreach (var sr in info.Tickets)
                 {
                     InsertCellInWorksheet(new ExcelCellParameters
                     {
@@ -111,7 +111,7 @@ spreadsheetDocument.WorkbookPart.Workbook.AppendChild<Sheets>(new Sheets());
                         ShareStringPart = shareStringPart,
                         ColumnName = "D",
                         RowIndex = rowIndex + 2,
-                        Text = sr.TypeService,
+                        Text = sr.TypeTicket,
                         StyleIndex = 0U
                     });
                     InsertCellInWorksheet(new ExcelCellParameters

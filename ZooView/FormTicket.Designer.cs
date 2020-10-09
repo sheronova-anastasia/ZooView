@@ -1,6 +1,6 @@
 ﻿namespace ZooView
 {
-    partial class FormService
+    partial class FormTicket
     {
         /// <summary>
         /// Required designer variable.
@@ -52,14 +52,14 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Вид услуги";
+            this.Column1.HeaderText = "Тип билета";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 125;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Стоимость услуги";
+            this.Column2.HeaderText = "Стоимость билета";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Width = 125;
@@ -70,9 +70,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 457);
             this.Controls.Add(this.dataGridView);
-            this.Name = "FormService";
-            this.Text = "FormService";
-            this.Load += new System.EventHandler(this.FormService_Load);
+            this.Name = "FormTicket";
+            this.Text = "FormTicket";
+            this.Load += new System.EventHandler(this.FormTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 

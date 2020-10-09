@@ -101,13 +101,13 @@ namespace ZooView
                     int id = Convert.ToInt32(comboBoxFIO.SelectedValue);
                     WorkerBindingModel model = new WorkerBindingModel();
                     var countDone = 0;
-                    var servi = logicS.Read(null);
-                    foreach (var serv in servi)
+                    var ticke = logicS.Read(null);
+                    foreach (var tick in ticke)
                     {
-                        if (serv.WorkerId == id)
+                        if (tick.WorkerId == id)
                         {
                             client++;
-                            if (serv.Status == Status.Готово)
+                            if (tick.Status == Status.Продан)
                                 countDone++;
                         }
                     }
