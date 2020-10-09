@@ -102,14 +102,14 @@ namespace ZooDatabaseImplement.Implements
                 .ToList();
             }
         }
-        public static List<ServiceClientViewModel> GetServiceClientViewModel(Client client)
+        public static List<TicketClientViewModel> GetServiceClientViewModel(Client client)
         {
             using (var context = new ZooDatabase())
             {
                 var ServiceClients = context.ServiceClients
                     .Where(rec => rec.ClientId == client.Id)
                     .Include(rec => rec.Service)
-                    .Select(rec => new ServiceClientViewModel
+                    .Select(rec => new TicketClientViewModel
                     {
                         Id = rec.Id,
                         ClientId = rec.ClientId,

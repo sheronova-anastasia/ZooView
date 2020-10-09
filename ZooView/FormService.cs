@@ -21,7 +21,7 @@ namespace ZooView
         private readonly IClientLogic clientLogic;
         public int Id { set { id = value; } }
         private int? id;
-        private List<ServiceClientViewModel> ServiceClients;
+        private List<TicketClientViewModel> ServiceClients;
         public FormService(IClientLogic clientLogic)
         {
             InitializeComponent();

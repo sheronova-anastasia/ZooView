@@ -43,7 +43,7 @@ namespace ZooView
             HierarchicalLifetimeManager());
             currentContainer.RegisterType<IClientLogic, ClientLogic>(new
            HierarchicalLifetimeManager());
-            currentContainer.RegisterType<IServiceLogic, ServiceLogic>(new
+            currentContainer.RegisterType<ITicketLogic, ServiceLogic>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<BackUpAbstractLogic, BackUpLogic>(new
            HierarchicalLifetimeManager());

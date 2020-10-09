@@ -20,7 +20,7 @@ namespace ZooView
         [Dependency]
         public new IUnityContainer Container { get; set; }
         private readonly IWorkerLogic logicW;
-        private readonly IServiceLogic logicS;
+        private readonly ITicketLogic logicS;
         public int Id { set { id = value; } }
         private int? id;
         public FormSalary()
