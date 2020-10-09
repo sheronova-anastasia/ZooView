@@ -70,7 +70,7 @@ namespace ZooView
             {
                 int id = Convert.ToInt32(comboBoxFIO.SelectedValue);
                 var client = logic.Read(new ClientBindingModel { Id = id });
-                string fileName = "C:\\Users\\Настя\\Desktop\\data\\" + "Отчет по по клиентам и их счету.pdf";
+                string fileName = "C:\\Users\\Настя\\Desktop\\data\\" + "Отчет по по клиентам и их счетам.pdf";
                 reportLogic.SaveClientsToPdfFile(fileName, id, textBoxMail.Text);
                 MessageBox.Show("Отправлено", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;
