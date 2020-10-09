@@ -21,7 +21,6 @@ namespace ZooView
         public new IUnityContainer Container { get; set; }
         private readonly ITicketLogic logicS;
         public Grafic(ITicketLogic logicS)
-        public Grafic()
         {
             InitializeComponent();
             this.logicS = logicS;

@@ -22,14 +22,14 @@ namespace ZooView
         [STAThread]
         static void Main()
         {
-            ServiceLogic logicS = new ServiceLogic();
+            TicketLogic logicS = new TicketLogic();
             WorkerLogic logic = new WorkerLogic();
             logic.SaveToDatabase();
             logicS.SaveToDatabase();
             var container = BuildUnityContainer();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var login = new FormAvtorizatsiya();
+            var login = new FormAutorization();
             login.ShowDialog();
             if (IsLogined)
             {
@@ -43,7 +43,7 @@ namespace ZooView
             HierarchicalLifetimeManager());
             currentContainer.RegisterType<IClientLogic, ClientLogic>(new
            HierarchicalLifetimeManager());
-            currentContainer.RegisterType<ITicketLogic, ServiceLogic>(new
+            currentContainer.RegisterType<ITicketLogic,TicketLogic>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<BackUpAbstractLogic, BackUpLogic>(new
            HierarchicalLifetimeManager());
